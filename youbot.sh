@@ -42,10 +42,10 @@ fi
 createprofile
 while  true; do
 proxychains firefox -P bot $1 $1 $1 $1 > /dev/null 2>&1 &
-sleep 20
+sleep 25
 wind=`xdotool search "Mozilla Firefox" | head -1`
 xdotool windowactivate --sync $wind key ctrl+r
-sleep 15
+sleep 25
 xdotool windowactivate --sync $wind key alt+F4
 sleep 5
 killall -HUP tor
